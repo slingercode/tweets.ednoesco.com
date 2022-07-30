@@ -31,9 +31,9 @@ type MediaKey = {
   width: number;
   height: number;
   url: string;
+  type: "video" | "photo" | "animated_gif";
+  duration_ms: number;
   public_metrics: {
     view_count: number;
   };
-  type: "video" | "photo";
-  duration_ms: number;
 };
