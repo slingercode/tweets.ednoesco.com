@@ -1,13 +1,20 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import theme from "../theme";
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <title>slingercode · tweets</title>
+      </Head>
+
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 
