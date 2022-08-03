@@ -1,12 +1,24 @@
 {
-  "name": "tweets.slingercode",
+  "name": "tweets.ednoesco.com",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "description": "Personal collection of tweets",
+  "author": {
+    "name": "Noel Espino Córdova",
+    "url": "https://ednoesco.com",
+    "email": "hi@ednoesco.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slingercode/tweets.ednoesco.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "env:pull": "vercel env pull .env.local"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.4",
