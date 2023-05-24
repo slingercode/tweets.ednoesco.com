@@ -1,3 +1,4 @@
+import { Tweet } from "~/components/tweet";
 import { getTweets } from "~/lib/tweets";
 
 export default async function Index() {
@@ -8,10 +9,10 @@ export default async function Index() {
   }
 
   return (
-    <div>
+    <main className="grid gap-5">
       {tweets.map((tweet) => (
-        <div key={tweet.id}>{JSON.stringify(tweet)}</div>
+        <Tweet key={tweet.id} tweet={tweet} />
       ))}
-    </div>
+    </main>
   );
 }

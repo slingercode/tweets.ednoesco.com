@@ -4,6 +4,7 @@ import "./globals.css";
 
 const berkeley = localFont({
   display: "swap",
+  variable: "--font-berkeley",
   src: "./BerkeleyMono-Regular.woff2",
 });
 
@@ -18,8 +19,10 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en-US" className={berkeley.className}>
-      <body>{children}</body>
+    <html lang="en-US" className={berkeley.variable}>
+      <body className="text-ednoesco-primary bg-ednoesco-background py-10 px-10 sm:px-0 max-w-screen-sm mx-auto">
+        {children}
+      </body>
     </html>
   );
 }
