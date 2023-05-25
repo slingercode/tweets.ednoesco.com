@@ -11,7 +11,7 @@ export default async function Index() {
   return (
     <main className="grid gap-5">
       {tweets.map((tweet) => (
-        <Tweet key={tweet.id} tweet={tweet} />
+        <Tweet key={`tweet-${tweet.id}`} tweet={tweet} />
       ))}
     </main>
   );
